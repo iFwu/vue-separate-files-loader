@@ -1,6 +1,6 @@
 # vue-separate-files-loader
 
-Load separate .js, .html, .css files under same directory as one .vue file.
+Load separate .js, .html, .css files under same directory as one .vue file.  
 It uses `src` attr in .vue file's tag, so support all features that vue-loader suports.
 
 > Differences between [vue-builder-webpack-plugin](https://github.com/pksunkara/vue-builder-webpack-plugin): It won't output a .vue file under your project directory, instead, it will load all files and directly output to vue-loader, so you can keep your repo cleaner😃!
