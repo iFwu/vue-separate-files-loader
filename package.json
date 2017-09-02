@@ -1,14 +1,14 @@
 {
-  "name": "vue-files-loader",
+  "name": "vue-separate-files-loader",
   "version": "0.1.0",
-  "description": "Assembly separate .js, .html, .css... files in same directory into one .vue file.",
+  "description": "Load separate .js, .html, .css files under same directory as one .vue file.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xekri/vue-files-loader.git"
+    "url": "git+https://github.com/xekri/vue-separate-files-loader.git"
   },
   "keywords": [
     "webpack",
@@ -19,9 +19,9 @@
   "author": "Fu Xiao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xekri/vue-files-loader/issues"
+    "url": "https://github.com/xekri/vue-separate-files-loader/issues"
   },
-  "homepage": "https://github.com/xekri/vue-files-loader#readme",
+  "homepage": "https://github.com/xekri/vue-separate-files-loader#readme",
   "devDependencies": {
     "loader-runner": "^2.3.0"
   },
