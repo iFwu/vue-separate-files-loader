@@ -1,4 +1,6 @@
 # vue-separate-files-loader
+[![npm version](https://badge.fury.io/js/vue-separate-files-loader.svg)](https://badge.fury.io/js/vue-separate-files-loader)
+
 
 Load separate .js, .html, .css files under same directory as one .vue file.  
 It uses `src` attr in .vue file's tag, so support all features that vue-loader suports.
