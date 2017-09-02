@@ -27,9 +27,10 @@ module.exports = {
 ```
 
 ## TODOS
-* support custome blocks
-* use magic comments to indicate tag attr option
-* support different file types, e.g. .scss...
+* [ ] support custome blocks
+* [ ] use magic comments to indicate tag attr option
+* [ ] if module is enabled, use file name as module name
+* [ ] support more file types, e.g. .scss...
 
 ## Contribution
 All kind of issues or pull requests are welcome!

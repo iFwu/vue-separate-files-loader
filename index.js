@@ -14,32 +14,31 @@ module.exports = function (content) {
   if (filesName.length === 0) {
     return
   }
-  const filesCode = {}
+  const tags = []
   Object.keys(regexes).forEach(type => {
     try {
-      let code = ''
+      let code = []
       const files = filesName.filter(file => regexes[type].some(re => re.test(file)))
       if (files.length === 0) {
         return
       }
+      if (type === 'script' || type === 'template') {
+        if (files.length > 1) {
+          throw new Error('script and template file must not be over 1')
+        }
+      }
       files.forEach(file => {
-        code += fs.readFileSync(path.join(dirPath, file), 'utf8')
-        code += '\n'
+        tags.push(tag({
+          name: type,
+          value: '' ,
+          attributes: {
+            src: path.join(dirPath, file)
+          }
+        }))
       })
-      filesCode[type] = code
     } catch (e) {
       throw e
     }
   })
-  let result = ''
-  Object.keys(filesCode).forEach(tagName => {
-    result += tag({
-      name: tagName,
-      value: filesCode[tagName]
-    })
-  })
-  // tag('script', null, )
-  // tag('template', null, )
-  // tag('style', null, )
-  return result
+  return tags.join('')
 }
