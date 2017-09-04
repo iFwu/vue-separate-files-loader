@@ -26,7 +26,8 @@
     "loader-runner": "^2.3.0"
   },
   "dependencies": {
-    "create-html-element": "^1.0.0"
+    "create-html-element": "^1.0.0",
+    "loader-utils": "^1.1.0"
   },
   "peerDependencies": {
     "vue-loader": ">=13.0.4 < 14"

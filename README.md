@@ -48,7 +48,12 @@ module: {
             postcss: [require('postcss-cssnext')()]
           }
         },
-        { loader: 'vue-separate-files-loader' }
+        {
+          loader: 'vue-separate-files-loader',
+          options: {
+            modules: true
+          }
+        }
       ]
     }
   ]

@@ -1,5 +1,5 @@
 const tag = require('create-html-element')
-// const loaderUtils = require('loader-utils')
+const loaderUtils = require('loader-utils')
 const fs = require('fs')
 const path = require('path')
 const regexes = {
@@ -9,7 +9,7 @@ const regexes = {
 }
 module.exports = function (content) {
   const dirPath = this.context
-  // const options = loaderUtils.getOptions(this)
+  const options = loaderUtils.getOptions(this)
   const filesName = fs.readdirSync(dirPath)
   if (filesName.length === 0) {
     return
@@ -32,7 +32,8 @@ module.exports = function (content) {
           name: type,
           value: '' ,
           attributes: {
-            src: path.join(dirPath, file)
+            src: path.join(dirPath, file),
+            module : options.module
           }
         }))
       })
