@@ -1,6 +1,6 @@
 {
   "name": "vue-separate-files-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Load separate .js, .html, .css files under same directory as one .vue file.",
   "main": "index.js",
   "scripts": {
