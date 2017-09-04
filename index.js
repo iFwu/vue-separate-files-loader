@@ -31,11 +31,9 @@ module.exports = function (content) {
         tags.push(tag({
           name: type,
           value: '' ,
-          attributes: {
-            src: path.join(dirPath, file),
-            module: options && options.module,
-            scoped: options && options.scoped,
-          }
+          attributes: Object.assign({}, {
+            src: path.join(dirPath, file)
+          }, options)
         }))
       })
     } catch (e) {
