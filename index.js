@@ -33,7 +33,8 @@ module.exports = function (content) {
           value: '' ,
           attributes: {
             src: path.join(dirPath, file),
-            module : options.module
+            module: options && options.module,
+            scoped: options && options.scoped,
           }
         }))
       })
