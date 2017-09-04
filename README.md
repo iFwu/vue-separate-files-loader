@@ -2,7 +2,7 @@
 [![npm version](https://badge.fury.io/js/vue-separate-files-loader.svg)](https://badge.fury.io/js/vue-separate-files-loader)
 
 
-Load separate .js, .html, .css files under same directory as one .vue file.  
+Load separate .js, .html, .css files under same directory as one .vue file.
 It uses `src` attr in .vue file's tag, so support all features that vue-loader suports.
 
 > Differences between [vue-builder-webpack-plugin](https://github.com/pksunkara/vue-builder-webpack-plugin): It won't output a .vue file under your project directory, instead, it will load all files and directly output to vue-loader, so you can keep your repo cleaner😃!
@@ -60,7 +60,6 @@ module: {
 * [ ] support custome blocks
 * [ ] use magic comments to indicate tag attr option
 * [ ] if module is enabled, use file name as module name
-* [ ] support more file types, e.g. .scss...
 
 ## Contribution
 All kind of issues or pull requests are welcome!

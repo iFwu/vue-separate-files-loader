@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const regexes = {
   script: [/\.jsx?$/],
-  style: [/\.css$/],
+  style: [/\.css$/, /\.s(a|c)ss$/, /\.stylus$/],
   template: [/\.tpl$/, /\.template$/, /\.html$/]
 }
 module.exports = function (content) {
