@@ -2,6 +2,7 @@ const tag = require('create-html-element')
 const loaderUtils = require('loader-utils')
 const fs = require('fs')
 const path = require('path')
+const _ = require('lodash')
 const regexes = {
   script: [/\.jsx?$/],
   style: [/\.css$/, /\.s(a|c)ss$/, /\.stylus$/],
@@ -33,7 +34,7 @@ module.exports = function (content) {
           value: '' ,
           attributes: Object.assign({}, {
             src: path.join(dirPath, file)
-          }, options)
+          }, _.omitBy(options, i => !i))
         }))
       })
     } catch (e) {

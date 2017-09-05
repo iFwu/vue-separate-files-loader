@@ -51,12 +51,35 @@ module: {
         {
           loader: 'vue-separate-files-loader',
           options: {
-            modules: true
+            scoped: true, // use vue-loader's scoped css
           }
         }
       ]
     }
   ]
+}
+...
+```
+## Options
+Actually, all options you pass to this loader, will be passed as attributes to `<style></style>`.
+### examples
+```js
+...
+{
+  loader: 'vue-separate-files-loader',
+  options: {
+    module: true, // use css modules => <style module></style>
+  }
+}
+...
+```
+```js
+...
+{
+  loader: 'vue-separate-files-loader',
+  options: {
+    module: 'a', // use css modules and its module name is "a" => <style module="a"></style>
+  }
 }
 ...
 ```
